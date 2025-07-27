@@ -12,7 +12,7 @@ void main() {
     printMenu(
       'Menu Principal',
       mainMenuLine,
-      options: ['Adicionar Música','Editar Música','Deletar Música','Relatório de Músicas','Parâmetros de Relatório','Sair']
+      ['Adicionar Música','Editar Música','Deletar Música','Relatório de Músicas','Parâmetros de Relatório','Sair']
     );
     print('Qual ação deseja realizar?');
     int userAcntion = validateMenu(6);

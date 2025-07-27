@@ -1,24 +1,30 @@
 import 'dart:io';
 
-void printMenu(String title, String line, {bool printOptions=true, List<String>? options}) {
+void printMenu(String title, String line, List<String> options) {
+  printHeader(title, line);
+  printOptions(options);
+  print(line);
+}
+
+
+void printHeader(String title, String line) {
   int tabLength = (((line.length - 8) - title.length) ~/ 2) + (((line.length - 8) - title.length) % 2);
-  int counter = 1;
 
   print(line);
   print('${' '*tabLength}${title}');
   print(line);
+}
 
-  if (!printOptions) {
-    return;
-  }
 
-  for (String option in options!) {
+void printOptions(List<String> options) {
+  int counter = 1;
+
+  for (String option in options) {
     print('${counter} > ${option}');
     counter++;
   }
-
-  print(line);
 }
+
 
 int validateMenu(int numberOfOption) {
   while (true) {
