@@ -11,8 +11,8 @@ void main() {
   while (true) {
     printMenu(
       'Menu Principal',
-      ['Adicionar Música','Editar Música','Deletar Música','Relatório de Músicas','Parâmetros de Relatório','Sair'],
-      mainMenuLine
+      mainMenuLine,
+      options: ['Adicionar Música','Editar Música','Deletar Música','Relatório de Músicas','Parâmetros de Relatório','Sair']
     );
     print('Qual ação deseja realizar?');
     int userAcntion = validateMenu(6);
