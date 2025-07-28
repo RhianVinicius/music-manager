@@ -12,4 +12,4 @@ final String reportMenuLine = line(lineLength, '34');
 const List<String> instrumentOptions = ['Violão', 'Piano'];
 const List<String> dificultOptions = ['Fácil', 'Intermediário', 'Difícil'];
 const List<String> isLearnedOptions = ['Aprendido', 'Não Aprendido'];
-const List<String> maestryOptions = ['Indefinido', 'Ruim', 'Mediano', 'Bom'];
+const List<String> maestryOptions = ['Ruim', 'Mediano', 'Bom'];
