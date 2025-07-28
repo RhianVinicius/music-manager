@@ -15,7 +15,7 @@ void main() {
       ['Adicionar Música','Editar Música','Deletar Música','Relatório de Músicas','Parâmetros de Relatório','Sair']
     );
     print('Qual ação deseja realizar?');
-    int userAcntion = validateMenu(6);
+    int userAcntion = validateOptions(6);
 
     switch (userAcntion) {
       case 1:

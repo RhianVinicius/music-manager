@@ -26,7 +26,7 @@ void printOptions(List<String> options) {
 }
 
 
-int validateMenu(int numberOfOption) {
+int validateOptions(int startNumber, int endNumber) {
   while (true) {
     stdout.write('> ');
     String? answer = stdin.readLineSync();
@@ -34,7 +34,7 @@ int validateMenu(int numberOfOption) {
 
     try {
       int answerAsInt = int.parse(answer!);
-      if (answerAsInt >= 1 && answerAsInt <= numberOfOption) return answerAsInt;
+      if (answerAsInt >= startNumber && answerAsInt <= endNumber) return answerAsInt;
       print('Opção indisponível! Digite uma das opções acima.');
     } catch (e) {
       print('Valor inválido! Digite um número');
