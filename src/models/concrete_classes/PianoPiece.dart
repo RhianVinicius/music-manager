@@ -1,16 +1,16 @@
 import '../abstract_classes/Piece.dart';
 
 class PianoPiece extends Piece {
-  String musicSheetPath;
+  String? musicSheetPath;
 
-  PianoPiece(
-    int id,
-    String name,
-    bool isLearned,
-    String dificult,
-    String maestry,
+  PianoPiece({
+    required int id,
+    required String name,
+    required bool isLearned,
+    required String dificult,
+    required String maestry,
     this.musicSheetPath
-  ) : super (
+  }) : super (
     id,
     name,
     'Piano',
