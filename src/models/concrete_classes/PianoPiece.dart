@@ -6,7 +6,7 @@ class PianoPiece extends Piece {
   PianoPiece({
     required int id,
     required String name,
-    required bool isLearned,
+    required String isLearned,
     required String dificult,
     required String maestry,
     this.musicSheetPath
@@ -22,5 +22,16 @@ class PianoPiece extends Piece {
   @override
   void showDetails() {
     // TODO: implement showDetails
+  }
+
+  static PianoPiece instanciateFromMap(Map<String, dynamic> data, int id) {
+    return PianoPiece(
+      id: id,
+      name: data["name"],
+      isLearned: data["isLearned"],
+      dificult: data["dificult"],
+      maestry: data["maestry"],
+      musicSheetPath: data["musicSheetPath"]
+    );
   }
 }

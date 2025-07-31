@@ -6,7 +6,7 @@ class GuitarPiece extends Piece {
   GuitarPiece({
     required int id,
     required String name,
-    required bool isLearned,
+    required String isLearned,
     required String dificult,
     required String maestry,
     this.tabPath
@@ -22,5 +22,16 @@ class GuitarPiece extends Piece {
   @override
   void showDetails() {
     // TODO: implement showDetails
+  }
+
+  static GuitarPiece instanciateFromMap(Map<String, dynamic> data, int id) {
+    return GuitarPiece(
+      id: id,
+      name: data["name"],
+      isLearned: data["isLearned"],
+      dificult: data["dificult"],
+      maestry: data["maestry"],
+      tabPath: data["tabPath"]
+    );
   }
 }

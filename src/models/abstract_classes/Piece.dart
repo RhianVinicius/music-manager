@@ -1,8 +1,10 @@
+import '../concrete_classes/GuitarPiece.dart';
+
 abstract class Piece {
   int id;
   String name;
   String instrument;
-  bool isLearned;
+  String isLearned;
   String dificult;
   String maestry;
 
@@ -16,4 +18,15 @@ abstract class Piece {
   );
 
   void showDetails();
+
+  static Piece instanciateFromMap(Map<String, dynamic> data, int id) {
+    switch (data["instrument"]) {
+      case 'Violão':
+        return GuitarPiece.instanciateFromMap(data, id);
+      case 'Piano':
+        return GuitarPiece.instanciateFromMap(data, id);
+      default:
+        throw Exception('Instrument not found: ${data["instrument"]}');
+    }
+  }
 }
