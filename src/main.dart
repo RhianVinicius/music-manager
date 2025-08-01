@@ -20,8 +20,8 @@ void main() {
 
     switch (userAcntion) {
       case 1:
-        dynamic teste = addValidator();
-        print(teste);
+        Map<String, dynamic> pieceData = addValidator();
+        library.addPiece(pieceData);
         break;
       case 2:
         break;

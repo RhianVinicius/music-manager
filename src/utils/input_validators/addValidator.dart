@@ -78,6 +78,8 @@ Map<String, dynamic> addValidator() {
     objectData["maestry"] = maestryOptions[maestryIndex-1];
   }
 
+  print(addMenuLine);
+
   objectData["isValid"] = true;
   return objectData;
 }

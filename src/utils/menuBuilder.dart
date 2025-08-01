@@ -30,7 +30,6 @@ int validateOptions(int startNumber, int endNumber) {
   while (true) {
     stdout.write('> ');
     String? answer = stdin.readLineSync();
-    print('');
 
     try {
       int answerAsInt = int.parse(answer!);
